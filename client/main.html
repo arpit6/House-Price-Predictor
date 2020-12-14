@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="img"></div>
+<h1 class="title">House Price Predictor</h1>
+<form class="form">
+	<h2 class="sqft">Area in Sqft (1-300000)</h2>
+    <input class="area"  type="number" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+	<br>
+	<br>
+	<h2 class="undc">Under Construction</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-UNDC-1" name="uiUNDC" value="1" checked/>
+		<label for="radio-UNDC-1">Yes</label>
+		<input type="radio" id="radio-UNDC-2" name="uiUNDC" value="0"/>
+		<label for="radio-UNDC-2">NO</label>
+	</div>
+	<h2 class="post">Posted By</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-POST-1" name="uiPOST" value="0" checked/>
+		<label for="radio-POST-1">Owner</label>
+		<input type="radio" id="radio-POST-2" name="uiPOST" value="1"/>
+		<label for="radio-POST-2">Dealer</label>
+	</div>
+
+	</form>
+<form class="form">
+	<h2 class="bhk">BHK (1-20)</h2>
+	<input class="area"  type="number" id="uiBHK" class="floatLabel" name="BHK" value="2">
+	<br>
+	<br>
+	<h2 class="loc">City</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Select Location</option>
+<option>Agra</option>
+<option>Ahmednagar</option>
+<option>Ajmer</option>
+<option>Akola</option>
+<option>Aligarh</option>
+<option>Allahabad</option>
+<option>Alwar</option>
+<option>Amravati</option>
+<option>Amritsar</option>
+<option>Anand</option>
+<option>Anantapur</option>
+<option>Asansol</option>
+<option>Aurangabad</option>
+<option>Bahadurgarh</option>
+<option>Bangalore</option>
+<option>Bardhaman</option>
+<option>Bareilly</option>
+<option>Belgaum</option>
+<option>Berhampur</option>
+<option>Bharuch</option>
+<option>Bhavnagar</option>
+<option>Bhilai</option>
+<option>Bhiwadi</option>
+<option>Bhopal</option>
+<option>Bhubaneswar</option>
+<option>Bilaspur</option>
+<option>Bokaro</option>
+<option>Chandigarh</option>
+<option>Chandrapur</option>
+<option>Chennai</option>
+<option>Coimbatore</option>
+<option>Cuttack</option>
+<option>Dehradun</option>
+<option>Dhanbad</option>
+<option>Dharuhera</option>
+<option>Dharwad</option>
+<option>Durg</option>
+<option>Durgapur</option>
+<option>Eluru</option>
+<option>Ernakulam</option>
+<option>Faridabad</option>
+<option>Gandhidham</option>
+<option>Gandhinagar</option>
+<option>Ghaziabad</option>
+<option>Goa</option>
+<option>Gulbarga</option>
+<option>Guntur</option>
+<option>Gurgaon</option>
+<option>Guwahati</option>
+<option>Gwalior</option>
+<option>Haldwani</option>
+<option>Haridwar</option>
+<option>Hazaribagh</option>
+<option>Hubli</option>
+<option>Indore</option>
+<option>Jabalpur</option>
+<option>Jaipur</option>
+<option>Jalandhar</option>
+<option>Jalgaon</option>
+<option>Jamnagar</option>
+<option>Jamshedpur</option>
+<option>Jhansi</option>
+<option>Jodhpur</option>
+<option>Junagadh</option>
+<option>Kakinada</option>
+<option>Kanchipuram</option>
+<option>Kannur</option>
+<option>Kanpur</option>
+<option>Karad</option>
+<option>Karjat</option>
+<option>Karnal</option>
+<option>Kochi</option>
+<option>Kolhapur</option>
+<option>Kolkata</option>
+<option>Kota</option>
+<option>Kottayam</option>
+<option>Lalitpur</option>
+<option>Latur</option>
+<option>Lucknow</option>
+<option>Ludhiana</option>
+<option>Madurai</option>
+<option>Maharashtra</option>
+<option>Mangalore</option>
+<option>Margao</option>
+<option>Mathura</option>
+<option>Meerut</option>
+<option>Mohali</option>
+<option>Moradabad</option>
+<option>Morbi</option>
+<option>Mumbai</option>
+<option>Mysore</option>
+<option>Nadiad</option>
+<option>Nagpur</option>
+<option>Nainital</option>
+<option>Nanded</option>
+<option>Navsari</option>
+<option>Neemrana</option>
+<option>Nellore</option>
+<option>Noida</option>
+<option>Palakkad</option>
+<option>Palghar</option>
+<option>Palwal</option>
+<option>Panaji</option>
+<option>Panchkula</option>
+<option>Patna</option>
+<option>Pondicherry</option>
+<option>Pune</option>
+<option>Puri</option>
+<option>Raigad</option>
+<option>Raigarh</option>
+<option>Raipur</option>
+<option>Rajkot</option>
+<option>Ranchi</option>
+<option>Ratnagiri</option>
+<option>Rewari</option>
+<option>Rishikesh</option>
+<option>Rohtak</option>
+<option>Rudrapur</option>
+<option>Secunderabad</option>
+<option>Shimla</option>
+<option>Siliguri</option>
+<option>Sindhudurg</option>
+<option>Solan</option>
+<option>Solapur</option>
+<option>Sonipat</option>
+<option>Surat</option>
+<option>Tenali</option>
+<option>Thrissur</option>
+<option>Tirunelveli</option>
+<option>Tirupati</option>
+<option>Udaipur</option>
+<option>Udupi</option>
+<option>Vadodara</option>
+<option>Valsad</option>
+<option>Vapi</option>
+<option>Varanasi</option>
+<option>Vijayawada</option>
+<option>Visakhapatnam</option>
+<option>Vizianagaram</option>
+<option>Warangal</option>
+<option>Wardha</option>
+<option>Others</option>
+  </select>
+</div>
+
+</form>
+<br>
+<form class="form">
+	<h2 class="rera">Real Estate Authorised</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-rera-1" name="uiRERA" value="1" checked/>
+		<label for="radio-rera-1">Yes</label>
+		<input type="radio" id="radio-rera-2" name="uiRERA" value="0"/>
+		<label for="radio-rera-2">NO</label>
+	</div>
+		
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button"><span>Estimate Price</span></button><br>
+	<div id="uiEstimatedPrice" class="result"> <h2></h2> </div>
+</form>
+<br>
+<br>
+
+
+	
+</body>
+</html>
