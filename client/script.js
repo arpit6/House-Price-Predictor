@@ -42,7 +42,7 @@ function onClickedEstimatePrice() {
   var rera = getReraValue();
   var estPrice = document.getElementById("uiEstimatedPrice");
 
-  var url = " house-price-pre.herokuapp.com/predict_home_price";
+  var url = " http://127.0.0.1:5000/predict_home_price";
 //     var url = "/api/predict_home_price"; // only Deployment
 
   $.post(
@@ -65,7 +65,7 @@ function onClickedEstimatePrice() {
 
 function onPageLoad() {
     console.log("document loaded");
-  var url = "house-price-pre.herokuapp.com/get_location_names";
+  var url = "http://127.0.0.1:5000/get_location_names";
 //     var url = "/api/get_location_names"; // only Deployment
   $.get(url, function (data, status) {
     console.log("got response for get_location_names request");
