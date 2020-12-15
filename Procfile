@@ -1,1 +1,1 @@
-web: gunicorn /client/server.py && /client/util.py
+web: gunicorn ./server/server.py && ./server/util.py
