@@ -7,7 +7,7 @@ __data_columns = None
 __model = None
 
 
-# Pass form data to prediction model
+# Pass form data to prediction model.
 def get_estimated_price(city, POSTED_BY, UNDER_CONSTRUCTION, RERA, BHK_NO, SQUARE_FT):
     try:
         loc_index = __data_columns.index(city)
